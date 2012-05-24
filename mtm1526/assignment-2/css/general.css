@@ -1,0 +1,14 @@
+li {
+	cursor: pointer;
+}
+
+.deleted {
+	color: #666;
+	text-decoration: line-through;
+}
+div{
+	background-color:#CCC;
+	height:300px;
+	width:200px;
+	padding:20px;
+}
