@@ -1,0 +1,18 @@
+@charset "utf-8";
+html
+body
+div{
+	background-color:#00CCFF;
+	width:300px;
+	height:80px;
+	margin:0 auto;
+	padding:25px;
+}
+.error{
+	font-size:18px;
+	color:#F90;
+}
+h1{
+	text-align:center;
+}
+
