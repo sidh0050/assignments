@@ -6,7 +6,7 @@
 
 //Our username and password are kept in a Environment Variables
 $user=getenv('DB_USER');//The mY SQl username
-$pass=('DB_PASS'); //The MYSQL password
+$pass=getenv('DB_PASS'); //The MYSQL password
 $data_source=getenv('DATA_SOURCE');
 
 //PDO:PHP Data Objects
