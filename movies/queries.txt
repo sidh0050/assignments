@@ -1,0 +1,16 @@
+1.SELECT movie_name,director_name,actor_name,actress_name,release_date
+FROM movies WHERE movie_id=1
+
+
+2.SELECT movie_name,release_date from movies WHERE movie_id=1 or movie_id=2 or movie_id=3 ORDER BY movie_name,release_date ASC
+
+
+3.SELECT movie_name,director_name,release_date from movies ORDER BY release_date ASC
+
+
+4.UPDATE movies SET movie_name= 'kabhi alvida na kehna', release_date='2010-04-27' WHERE movie_id=5
+
+
+5.INSERT INTO movies(movie_id,movie_name,director_name,actor_name,actress_name,release_date)
+VALUES
+('7','chupke chupke','yashi','kapoor','sania','2005-04-14')
