@@ -59,9 +59,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 <body>
 
-<h1>Add New Dinosaur</h1>
+<h1>Edit dinasours</h1>
 
-<form method="post" action="add.php">
+<form method="post" action="edit.php">
 
 <div>
 <label for="dino_name">
