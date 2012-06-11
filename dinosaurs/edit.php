@@ -20,13 +20,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	if(empty($errors)){
 
 	
-	$sql = $db->prepare('UPDATE dinosaurs(dino_name,loves_meat,in_jurassic_park)
-	VALUES(:dino_name,:loves_meat,:in_jurassic_park WHERE id=:id)');
+	$sql = $db->prepare('UPDATE dinosaurs SET dino_name,loves_meat,in_jurassic_park
+	WHERE id=:id');
 	$sql->bindValue(':id',$id,PDO::PARAM_INT);
 	
 	$sql->bindValue(':dino_name',$dino_name,PDO::PARAM_STR);
-	$sql->bindValue('loves_meat',$loves_meat,PDO::PARAM_INT);
-	$sql->bindValue('in_jurassic_park',$in_jurassic_park,PDO::PARAM_INT);
+	$sql->bindValue(':loves_meat',$loves_meat,PDO::PARAM_INT);
+	$sql->bindValue(':in_jurassic_park',$in_jurassic_park,PDO::PARAM_INT);
 	$sql->execute();
 	
 	header('Location:index.php');
@@ -46,8 +46,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$results=$sql->fetch();
 	
 	$dino_name=$results['dino_name'];
-	$dino_name=$results['loves_meat'];
-	$dino_name=$results['in_jurassic_park'];
+	$loves_meat=$results['loves_meat'];
+	$in_jurassic_park=$results['in_jurassic_park'];
 	
 }
 
