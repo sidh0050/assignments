@@ -52,11 +52,11 @@ Relationship With Meat
 <?php endif; ?>
 
 </legend>
-<input type="radio" id="love" name="loves_meat" value="1">
+<input type="radio" id="love" name="loves_meat" value="1"
 <?php if($loves_meat==1): ?>checked<?php endif;?>>
 <label for="love">Loves Meat</label>
 
-<input type="radio" id="hate" name="loves_meat" value="0">
+<input type="radio" id="hate" name="loves_meat" value="0"
 <?php if($loves_meat==0): ?>checked<?php endif;?>>
 <label for="hate">Hates Meat</label>
 </fieldset>
