@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	FROM dinosaurs
 	WHERE id=:id
 	');
-	$sql->bindValue(':id',$id,PDO::PARAM_iNT);
+	$sql->bindValue(':id',$id,PDO::PARAM_INT);
 	$sql-execute();
 	$results=$sql->fetch();
 	
