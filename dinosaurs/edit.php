@@ -79,7 +79,7 @@ Relationship With Meat
 <label for="in_jurassic_park">In Jurassic Park?</label>
 </div>
 
-<button type="submit">Add</button>
+<button type="save">Save</button>
 </form>
 </body>
 </html>
