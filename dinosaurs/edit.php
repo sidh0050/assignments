@@ -20,7 +20,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	if(empty($errors)){
 
 	
-	$sql = $db->prepare('UPDATE dinosaurs SET dino_name,loves_meat,in_jurassic_park
+	$sql = $db->prepare('UPDATE dinosaurs SET dino_name=dino_name,
+	loves_meat=:loves_meat,
+	in_jurassic_park=:in_jurassic_park
 	WHERE id=:id');
 	$sql->bindValue(':id',$id,PDO::PARAM_INT);
 	
