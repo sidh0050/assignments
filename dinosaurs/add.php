@@ -2,7 +2,7 @@
 $errors=array();
 
 $dino_name=filter_input(INPUT_POST,'dino_name',FILTER_SANITIZE_STRING);
-$loves_meat=filter_input(INPUT_POST,'loves_meat',FILTER_SANITIZE_NUMBER);
+$loves_meat=filter_input(INPUT_POST,'loves_meat',FILTER_SANITIZE_NUMBER_int);
 $in_jurassic_park=(isset($_POST['in_jurassic_park']))?1:0;
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -63,7 +63,7 @@ Relationship With Meat
 
 <div>
 <input type="checkbox" id="in_jurassic_park" name="in_jurassic_park">
-<?php if($in_jurassic_park==1): ?>checked<?php endif;?>>
+<?php if($in_jurassic_parkss==1): ?>checked<?php endif;?>>
 <label for="in_jurassic_park">In Jurassic Park?</label>
 </div>
 
