@@ -40,8 +40,7 @@ Dinosaur Name
 <?php endif; ?>
 </label>
 
-<label for="dino_name">Dinosaur Name</label>
-<input id="dino_nmae" name="dino_name" required>
+<input id="dino_name" name="dino_name" required value="<?php echo $dino_name; ?>">
 </div>
 
 <fieldset>
