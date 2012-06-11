@@ -1,6 +1,9 @@
 <?php
+
+	require_once'includes/db.php';
 $errors=array();
 
+$id=filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
 $dino_name=filter_input(INPUT_POST,'dino_name',FILTER_SANITIZE_STRING);
 $loves_meat=filter_input(INPUT_POST,'loves_meat',FILTER_SANITIZE_NUMBER_INT);
 $in_jurassic_park=(isset($_POST['in_jurassic_park']))?1:0;
@@ -15,7 +18,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	}
 	
 	if(empty($errors)){
-	require_once 'includes/db.php';
+
 	
 	$sql = $db->prepare('INSERT INTO dinosaurs(dino_name,loves_meat,in_jurassic_park)
 	VALUES(:dino_name,:loves_meat,:in_jurassic_park)');
@@ -30,6 +33,21 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	
 	
 	}
+}else {
+
+	$sql=$db->prepare('
+	SELECT dino_name,loves_meat,in_jurassic_park
+	FROM dinosaurs
+	WHERE id=:id
+	');
+	$sql->bindValue(':id',$id,PDO::PARAM_iNT);
+	$sql-execute();
+	$results=$sql->fetch();
+	
+	$dino_name=$results['dino_name'];
+	$dino_name=$results['loves_meat'];
+	$dino_name=$results['in_jurassic_park'];
+	
 }
 
 ?><!DOCTYPE HTML>
