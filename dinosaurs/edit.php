@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	WHERE id=:id
 	');
 	$sql->bindValue(':id',$id,PDO::PARAM_INT);
-	$sql-execute();
+	$sql->execute();
 	$results=$sql->fetch();
 	
 	$dino_name=$results['dino_name'];
