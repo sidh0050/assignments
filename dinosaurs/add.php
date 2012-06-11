@@ -63,7 +63,7 @@ Relationship With Meat
 
 <div>
 <input type="checkbox" id="in_jurassic_park" name="in_jurassic_park">
-<?php if($in_jurassic_parkss==1): ?>checked<?php endif;?>>
+<?php if($in_jurassic_parks==1): ?>checked<?php endif;?>>
 <label for="in_jurassic_park">In Jurassic Park?</label>
 </div>
 
