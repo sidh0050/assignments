@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 <h1>Edit dinasours</h1>
 
-<form method="post" action="edit.php">
+<form method="post" action="edit.php?id=<?php echo $id;?>">
 
 <div>
 <label for="dino_name">
