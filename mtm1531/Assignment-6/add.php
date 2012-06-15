@@ -56,11 +56,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <head>
 <meta charset="utf-8">
 <title>Add New Movie In Database</title>
+
+
+<link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
-
+<div class="addmovie">
 <h1>Add New Movie In Database</h1>
+
+
+
+
 
 <form method="post" action="add.php">
 
@@ -146,5 +153,6 @@ Release Date
 
 <button type="submit">Add</button>
 </form>
+</div>
 </body>
 </html>

@@ -85,7 +85,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 </head>
 
 <body>
-
+<div class="edit">
 <h1>Edit New Movie </h1>
 
 <form method="post" action="edit.php?id=<?php echo $id;?>">
@@ -169,6 +169,7 @@ Release Date
 
 
 <button type="save">Save</button>
+</div>
 </form>
 </body>
 </html>

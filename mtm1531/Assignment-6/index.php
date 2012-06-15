@@ -15,11 +15,12 @@ $results=$sql->fetchAll();
 <head>
 <meta charset="utf-8">
 <title>Extending Movie</title>
+<link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
 <div class="movies">
-<a href="css/general.css"></a>
+	
 <a href="add.php">Add A New Movie</a>
 <?php foreach($results as $movies): ?>
 <h2><a href="single.php?id=<?php echo $movies['movie_id']; ?>">
