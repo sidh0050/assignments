@@ -1,0 +1,35 @@
+
+
+
+.movies{
+
+	background-color:#CCC;
+	width: 100px;
+	padding:100px;
+	border-style:dashed;
+	border:#0000FF 2px solid;
+	margin:100px;
+}
+.addmovie{
+	background-color:#C96;
+	margin:100px;
+	padding:100px;
+	border-style:dashed;
+	border:#0000FF 2px solid;
+	width:100px;
+}
+
+.edit{
+	
+	background-color:#C96;
+	margin:100px;
+	padding:100px;
+	border-style:dashed;
+	border:#0000FF 2px solid;
+	width:100px;
+}
+	
+	
+
+		
+
