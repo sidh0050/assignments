@@ -1,16 +1,13 @@
 <?php
-
-	require_once'includes/db.php';
+require_once'includes/db.php';
 $errors=array();
 
-$id=filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+$id=filter_input(INPUT_GET,'movie_id',FILTER_SANITIZE_NUMBER_INT);
 $movie_name=filter_input(INPUT_POST,'movie_name',FILTER_SANITIZE_STRING);
 $director_name=filter_input(INPUT_POST,'director_name',FILTER_SANITIZE_STRING);
 $actor_name=filter_input(INPUT_POST,'actor_name',FILTER_SANITIZE_STRING);
 $actress_name=filter_input(INPUT_POST,'actress_name',FILTER_SANITIZE_STRING);
 $release_date=filter_input(INPUT_POST,'release_date',FILTER_SANITIZE_NUMBER_INT);
-
-
 
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -30,76 +27,62 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	if(empty($release_date)) {
 		$errors['release_date']=true;
 	}
-	if(empty($errors)){
-
 	
-	$sql = $db->prepare('UPDATE movies SET movie_name=:movie_name,
-	director_name=:director_name,
-	actor_name=:actor_name,
-	actress_name=:actress_name,
-	release_date=:release_date
-	WHERE movie_id=:id');
-	$sql->bindValue(':id',$id,PDO::PARAM_INT);
+	
+	if(empty($errors)){
+	require_once 'includes/db.php';
+	
+	$sql = $db->prepare('INSERT INTO movies(movie_name,director_name,actor_name,actress_name,release_date)
+	VALUES(:movie_name,:director_name,:actor_name,:actress_name,:release_date)');
 	
 	$sql->bindValue(':movie_name',$movie_name,PDO::PARAM_STR);
 	$sql->bindValue(':director_name',$director_name,PDO::PARAM_STR);
 	$sql->bindValue(':actor_name',$actor_name,PDO::PARAM_STR);
-	$sql->bindValue(':actress_name',$actor_name,PDO::PARAM_STR);
+	$sql->bindValue(':actress_name',$actress_name,PDO::PARAM_STR);
 	$sql->bindValue(':release_date',$release_date,PDO::PARAM_INT);
 	
-	
 	$sql->execute();
-	var_dump($sql->errorInfo());
+	
 	header('Location:index.php');
 	exit;
 	
 	
 	
 	}
-}else {
-
-	$sql=$db->prepare('
-	SELECT movie_name,director_name,actor_name,actress_name,release_date
-	FROM movies
-	WHERE movie_id=:id
-	');
-	$sql->bindValue(':id',$id,PDO::PARAM_INT);
-	$sql->execute();
-	
-	$results=$sql->fetch();
-	
-	$movie_name=$results['movie_name'];
-	$director_name=$results['director_name'];
-	$actor_name=$results['actor_name'];
-	$actress_name=$results['actress_name'];
-	$release_date=$results['release_date'];
-	
-	
 }
 
 ?><!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Add New Movie in Database</title>
+<title>Add New Movie In Database</title>
+
+
 <link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
-<div class="edit">
-<h1>Edit New Movie </h1>
+<div class="addmovie">
+<h1>Add New Movie In Database</h1>
 
-<form method="post" action="edit.php?id=<?php echo $id;?>">
+
+
+
+
+<form method="post" action="add.php">
 
 <div>
 <label for="movie_name">
 Movie Name
 <?php if(isset($errors['movie_name'])):?>
-<strong class="errors">Movie name is required</strong>
+<strong class="errors"> Movie Name is required</strong>
 <?php endif; ?>
 </label>
+
 <input id="movie_name" name="movie_name" required value="<?php echo $movie_name; ?>">
 </div>
+
+
 
 
 
@@ -168,9 +151,8 @@ Release Date
 
 
 
-
-<button type="save">Save</button>
-</div>
+<button type="submit">Add</button>
 </form>
+</div>
 </body>
 </html>
