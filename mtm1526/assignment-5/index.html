@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Form Validation</title>
+		<link href="css/general.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="big">
+		<form>
+	
+			<div class="username">
+			<ul>
+				<label for="username"><strong>Username</strong></label>
+				
+				<input id="username" name="username" required>
+				
+				<strong class="user-available" data-status="unchecked">Available</strong>
+				</ul>
+			</div>
+			
+			
+				<div class="email">
+				<ul>
+<label for="email"><strong>E-Mail address</strong></label>
+<input type="email" id="email" name="email" required>
+</ul>
+</div>
+
+
+			<div>
+				<label for="password"><strong>Password</strong></label>
+				<input type="password" id="password" name="password" required>
+				
+				<div class="upperlower">
+					
+					<ul class="pass-lower">1 lowercase letter</ul>
+					
+					<ul class="pass-upper">1 uppercase letter</ul>
+					
+					</div>
+			
+				<ul class="pass-reqs">
+					<li class="pass-length">more than 6 characters</li>
+					
+					<li class="pass-num">1 number</li>
+					<li class="pass-symbol">1 special character</li>
+				</ul>
+			</div>
+			
+			
+			
+	
+			<div class="city">
+			<ul>
+				<label for="city">City</label>
+				
+				<input id="city" name="city" required>
+				</ul>
+				</div>
+				
+				
+				<div class="country">
+
+<legend> <strong>Country</strong></legend>
+
+
+<input type="radio" id="country-india" name="country"  class="country">
+<label for="india">India</label>
+
+
+
+<div class="india hidden">
+<div class="province">
+<label for="province">Province</label>
+<select id="province" name="province">
+<option>India</option>
+<option>Canada</option>
+<option >Pakistan</option>
+<option>Nigeria</option>
+</select>
+<div class="postalcode">
+<ul>
+<label for="postal code">Postal Code</label>
+<input id="postal code" name="postal code" required>
+
+<div id="gethtml">
+</ul>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+<input type="radio" id="country-us" name="country" class="country" >
+<label for="us">Us</label>
+
+
+
+<div class="us hidden">
+<div class="state">
+<label for="state">State</label>
+<select id="state" name="state">
+<option>India</option>
+<option>Canada</option>
+<option >Pakistan</option>
+<option>Nigeria</option>
+</select>
+<div class="zipcode">
+<ul>
+<label for="zipcode">Zip Code</label>
+<input id="zipcode" name="zipcode" required>
+</ul>
+
+</div>
+
+
+</div>
+<div>
+<button type="submit">Register Me</button>
+</div>
+	
+
+
+
+
+
+</div>
+
+
+		</form>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/form-validation.js"></script>
+			</div>
+	</body>
+</html>
