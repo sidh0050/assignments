@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	var userAvailable = $('.user-available');
+	var emailAvailable =$('.email-Available');
+	var cityAvailable =$('.city-Available');
 	var passwordReqs = 0;
 
 		$('#country-india').on('click',function(){
@@ -32,21 +34,6 @@ $(document).ready(function(){
 			var ajax = $.post('check-username.php', {
 				'username' : username
 			});
-			
-			
-	
-		
-			
-			
-		
-			
-			
-			
-			
-			
-			
-			
-			
 			ajax.done(function (data){
 				if(data == 'available'){
 					userAvailable.attr('data-status', 'available').html('Available');
@@ -60,6 +47,65 @@ $(document).ready(function(){
 			userAvailable.attr('data-status', 'unavailable').html('Unavailable');
 		}
 	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	$('#email').on('change', function(ev){
+		var email = $(this).val();
+		
+	emailAvailable.attr('data-status', 'unchecked');
+		
+		if(email.length >= 3 && email.length <= 25){
+			var ajax = $.post('check-email.php', {
+				'email' : email
+			});
+			
+			
+			
+			
+			
+			
+		ajax.done(function (data){
+				if(data == 'available'){
+					emailAvailable.attr('data-status', 'available').html('Available');
+				}
+				else{
+					emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
+				}
+			});
+		}
+		else{
+		emailAvailable.attr('data-status', 'unavailable').html('Unavailable');
+		}
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	
 	$('#password').on('keyup', function(ev) {
 		var password = $(this).val();
