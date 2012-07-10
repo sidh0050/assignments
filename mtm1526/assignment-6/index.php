@@ -12,7 +12,7 @@ $planet='';
 <html>
 <head>
 <meta charset="utf-8">
-<title>Planets</title>
+<title>Progressive enhancement</title>
 <link href="css/general.css" rel="stylesheet">
 </head>
 
