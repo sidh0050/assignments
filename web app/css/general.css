@@ -1,0 +1,126 @@
+
+body{
+	height:1028px;
+	width:1024px;
+	background-color:#FFF;
+	
+	
+}
+
+.images img{
+	position:relative;
+
+float:left;
+    height: 400px;
+    width: 400px;
+		
+		padding:45px;
+}
+.main{
+	
+	
+	position:relative;
+	
+}
+
+.buttons button{
+	width:100px;
+	height:100px;
+	
+	
+	margin-left:1700px;
+}
+
+.navigation ul {
+	 height:50px;
+	 width:800px;
+	 background-color:#666666;
+	 style:none;
+	 border-radius: 15px;
+	
+	 
+	
+}
+
+
+	nav ul li{
+	margin: 0;
+	padding-top:5px;;
+	float:none;
+	list-style-type: none;
+	display:inline-block;
+	font-size:15px;
+	padding-left:130px;
+}
+nav a,
+nav a:link,
+nav a:visited {
+	display: block;
+	padding: 0.5em 0.75em;
+	
+	color: #FFF;
+	font-size: 1.25em;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+
+.images{
+display:inline;
+width:200%;
+height:200px;
+
+
+} 
+.footer{
+	height:120px;
+	width:2550px;
+	background-color:#666666;
+	 border-radius: 15px;
+}
+.footerhome{
+
+	 margin: 0;
+	padding-top:5px;
+	float: none;
+	list-style-type: none;
+	color:#FFF;
+	font-size:15px;
+	padding-left:10px;
+}
+.footerlists{
+	
+	
+	 margin-top:-160px;
+	
+	float:left;
+	list-style-type: none;
+	color:#FFF;
+	font-size:12px;
+	padding-left:290px;
+}
+.footerrecipies{
+	
+	
+	 margin-top: -160px;
+color:#FFF;
+	float:left;
+	list-style-type: none;
+	
+	font-size:12px;
+	padding-left:550px;
+}
+.logo{
+
+	padding-left:300px;
+}
+.main{
+	padding-left:300px;
+}
+	.img{
+		background-color:#03F;
+		width:1000px;
+		height:1000px;
+		margin-left:500px;
+	}
+
+
