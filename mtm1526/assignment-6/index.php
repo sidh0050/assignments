@@ -17,6 +17,9 @@ $planet='';
 </head>
 
 <body>
+<div class="img">
+<img src="images/planet.jpg">
+</div>
 
 <nav>
 <ul>
@@ -61,6 +64,15 @@ $planet='';
 	 
  }
 ?>
+
+
+<div id="gethtml"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/ajaxtabs.js"></script>
+
+
 </article>
 </body>
 </html>
