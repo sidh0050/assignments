@@ -46,7 +46,5 @@ $(document).ready(function() {
 		$('#gethtml').load('includes/sun.html');
 		
 	
-		
 	});
-
-	});
+});

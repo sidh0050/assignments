@@ -19,7 +19,7 @@ $results=$sql->fetchAll();
 <html>
 <head>
 <meta charset="utf-8">
-<title>AJAX tabs</title>
+<title>Progressive enhancement</title>
 <link href="css/general.css" rel="stylesheet">
 
 </head>
