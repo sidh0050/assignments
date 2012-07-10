@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	$.get('includes/earth.html',function(data){
+	$.get('includes/earth.php',function(data){
 		$('#gethtml').prepend(data);
 	});
 	
@@ -9,7 +9,7 @@ $(document).ready(function() {
 	
 	$('#mars').on('click',function(e){
 			e.preventDefault();
-		$('#gethtml').load('includes/mars.html');
+		$('#gethtml').load('includes/mars.php');
 		
 	
 		
@@ -19,7 +19,7 @@ $(document).ready(function() {
 	
 	$('#saturn').on('click',function(e){
 		e.preventDefault();
-		$('#gethtml').load('includes/saturn.html');
+		$('#gethtml').load('includes/saturn.php');
 		
 	
 		
@@ -27,23 +27,17 @@ $(document).ready(function() {
 	
 	$('#venus').on('click',function(e){
 		e.preventDefault();
-		$('#gethtml').load('includes/venus.html');
+		$('#gethtml').load('includes/venus.php');
 		
 	
 		
 	});
 	
-	$('#pluto').on('click',function(e){
-		e.preventDefault();
-		$('#gethtml').load('includes/pluto.html');
-		
+
 	
-		
-	});
-	
-	$('#sun').on('click',function(e){
+	$('#jupiter').on('click',function(e){
 		e.preventDefault();
-		$('#gethtml').load('includes/sun.html');
+		$('#gethtml').load('includes/jupiter.php');
 		
 	
 	});

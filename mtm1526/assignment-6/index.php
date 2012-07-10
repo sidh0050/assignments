@@ -1,47 +1,66 @@
-<?php 
+<?php
 
-require_once 'includes/db.php';
+$planet='';
 
-$sql =$db->query('SELECT Name,Content FROM planet ORDER BY Name ASC');
-
-
-var_dump($db->errorInfo());
-
-
-
-$results=$sql->fetchAll();
-
-
-?>
-
-
+ if(isset($_GET['planet'])){
+		 $planet=strtolower($_GET['planet']);
+		 
+ }
+ ?>
+ 
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Progressive enhancement</title>
+<title>Planets</title>
 <link href="css/general.css" rel="stylesheet">
-
 </head>
 
 <body>
+
 <nav>
+<ul>
+<li <?php if(($planet!='mars')&&($planet!='jupiter')&&($planet!='venus')&&($planet!='saturn')){?>class="current"<?php }?>><a href="?planet=earth">Earth</a></li>
+<li<?php if($planet == 'mars'){ ?> class="current"<?php }?>><a href="?planet=Mars"> Mars</a></li>
+<li<?php if($planet =='jupiter'){ ?> class="current"<?php } ?>><a href="?planet=Jupiter"> Jupiter</a></li>
+<li<?php if ($planet =='venus'){ ?> class="current"<?php } ?>><a href="?planet=venus"> Venus</a></li>
+<li<?php if ($planet =='saturn'){ ?> class="current"<?php } ?>><a href="?planet=saturn"> saturn</a></li>
+</ul>
+</nav>
 
+<article>
+<?php
 
-<ul class="planets">
-<li id="earth"><a href="includes/earth.html">Earth</a></li>
-<li id="venus"><a href="includes/venus.html">Venus</a></li>
-<li id="pluto"><a href="includes/pluto.html">Pluto</a></li>
-<li id="mars"><a href="includes/mars.html">Mars</a></li>
-<li id="saturn"><a href="includes/saturn.html">Saturn</a></li>
-<li id="sun"> <a href="includes/sun.html">Sun</a></li>
-
-<div id="gethtml"></div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="js/ajaxtabs.js"></script>
-
-
+   
+	 switch($planet) {
+		 
+	
+	 
+	 
+	 case 'mars' :
+		 include 'includes/mars.php';
+		 break;
+		 
+		 case 'jupiter' :
+		 include 'includes/jupiter.php';
+		 break;
+		 
+		 case 'venus' :
+		 include 'includes/venus.php';
+		 break;
+		 
+		  
+		 case 'saturn' :
+		 include 'includes/saturn.php';
+		 break;
+		 
+		 case 'earth':
+		 default:
+	 include 'includes/earth.php';
+	 break;
+	 
+ }
+?>
+</article>
 </body>
 </html>

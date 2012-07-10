@@ -1,0 +1,2 @@
+<h1>Jupiter</h1>
+<p>"Whoa! Pluto's dead," said astronomer Mike Brown, of the California Institute of Technology in Pasadena, as he watched a Webcast of the vote. "There are finally, eight planets in the solar system." </p>
